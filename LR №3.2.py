@@ -1,0 +1,15 @@
+def find_common_participants(group1, group2, separator=','): # TODO Напишите функцию find_common_participants
+    participants1 = group1.split(separator)
+    participants2 = group2.split(separator)
+    common = set(participants1) & set(participants2)
+    return sorted(list(common))
+participants_first_group = "Иванов|Петров|Сидоров"
+participants_second_group = "Петров|Сидоров|Смирнов"
+# TODO Провеьте работу функции с разделителем отличным от запятой
+common_participants = find_common_participants(
+    participants_first_group,
+    participants_second_group,
+    separator='|'
+)
+
+print("Общие участники:", common_participants)
